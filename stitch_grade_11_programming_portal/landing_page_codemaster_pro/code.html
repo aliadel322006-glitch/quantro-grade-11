@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CodeMaster Pro: Grade 11 Computer Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#adc6ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary-container": "#461f00",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#003824",
+                        "outline-variant": "#424754",
+                        "tertiary-container": "#df7412",
+                        "tertiary": "#ffb786",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed": "#311400",
+                        "on-tertiary": "#502400",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#adc6ff",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d8e2ff",
+                        "primary": "#adc6ff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "surface-bright": "#393939",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#00311f",
+                        "surface": "#131313",
+                        "primary-container": "#4d8eff",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "surface-container": "#202020",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-surface-variant": "#c2c6d6",
+                        "secondary": "#4edea3",
+                        "secondary-container": "#00a572",
+                        "outline": "#8c909f",
+                        "on-primary-container": "#00285d",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#002e6a",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#005ac2",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#002113",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-low": "#1b1b1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "code-block": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "code-inline": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "code-block": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Syntax highlighting placeholders */
+        .token.keyword { color: #4d8eff; }
+        .token.string { color: #4edea3; }
+        .token.comment { color: #8c909f; }
+        .token.function { color: #ffb786; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg text-body-lg min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline-variant z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tight">CodeMaster Pro</span>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:bg-surface-variant/50 transition-colors px-3 py-2 rounded" href="#curriculum">Curriculum</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 transition-colors px-3 py-2 rounded" href="#features">Features</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 transition-colors px-3 py-2 rounded" href="#testimonials">Testimonials</a>
+<a class="text-primary font-bold hover:bg-surface-variant/50 transition-colors px-3 py-2 rounded" href="/login">Sign In</a>
+</nav>
+<div class="flex items-center gap-4 md:hidden">
+<button class="text-on-surface hover:bg-surface-variant/50 p-2 rounded transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-20 md:py-32 max-w-max-width mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 flex flex-col gap-6 items-start">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-sm">school</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Grade 11 Computer Science</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background">
+                    Master the Art of <span class="text-primary">Systematic Coding</span>
+</h1>
+<p class="text-on-surface-variant max-w-lg">
+                    A professional-grade curriculum designed to strip away visual noise and focus on pure code comprehension, algorithms, and technical fundamentals.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-body-lg text-body-lg font-bold px-6 py-3 rounded transition-colors">
+                        Start Learning
+                    </button>
+<button class="bg-transparent border border-outline hover:border-primary text-on-background hover:text-primary font-body-lg text-body-lg px-6 py-3 rounded transition-colors flex items-center gap-2">
+                        View Syllabus
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-6 mt-10 md:mt-0">
+<!-- Code Window Decorator -->
+<div class="bg-[#0F172A] rounded-lg border border-outline-variant overflow-hidden shadow-2xl relative group">
+<div class="bg-surface-container-highest border-b border-outline-variant px-4 py-2 flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container"></div>
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="ml-4 font-code-inline text-code-inline text-on-surface-variant uppercase">main.py</span>
+</div>
+<div class="p-6 font-code-block text-code-block text-on-surface overflow-x-auto">
+<pre><code><span class="token keyword">def</span> <span class="token function">binary_search</span>(arr, target):
+    <span class="token comment"># Implements O(log n) search</span>
+    left, right = <span class="token string">0</span>, <span class="token function">len</span>(arr) - <span class="token string">1</span>
+    
+    <span class="token keyword">while</span> left &lt;= right:
+        mid = (left + right) // <span class="token string">2</span>
+        <span class="token keyword">if</span> arr[mid] == target:
+            <span class="token keyword">return</span> mid
+        <span class="token keyword">elif</span> arr[mid] &lt; target:
+            left = mid + <span class="token string">1</span>
+        <span class="token keyword">else</span>:
+            right = mid - <span class="token string">1</span>
+            
+    <span class="token keyword">return</span> -<span class="token string">1</span></code></pre>
+</div>
+<!-- Decorative highlight on hover -->
+<div class="absolute inset-0 border border-transparent group-hover:border-primary transition-colors pointer-events-none rounded-lg"></div>
+</div>
+</div>
+</section>
+<!-- Curriculum Bento Grid -->
+<section class="bg-surface-container-low py-20 px-margin-mobile md:px-margin-desktop" id="curriculum">
+<div class="max-w-max-width mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Core Curriculum</h2>
+<p class="text-on-surface-variant max-w-2xl">Structured, rigorous paths designed for clear progression from basic syntax to complex data structures.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+<!-- Bento Box 1 -->
+<div class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Python Fundamentals</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Deep dive into Python syntax, control flow, functions, and object-oriented programming concepts.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Module 01</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Box 2 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<div>
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">account_tree</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Algorithms</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Sorting, searching, and complexity analysis (Big O notation).</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Module 02</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Box 3 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-container transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<div>
+<div class="w-12 h-12 bg-tertiary-container/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-container text-3xl">web</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Web Development</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Building interactive interfaces with HTML, CSS, and basic JavaScript.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Module 03</span>
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary-container transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Box 4 -->
+<div class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Capstone Projects</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Apply everything learned by building complete applications from scratch, utilizing version control (Git).</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Module 04</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Environment Overview -->
+<section class="px-margin-mobile md:px-margin-desktop py-20 max-w-max-width mx-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-6">A Workspace Built for Focus</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Integrated Editor</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Write, run, and debug code directly in the browser without setup overhead.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Real-time Feedback</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Instant compilation and error highlighting to accelerate the learning loop.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Terminal Access</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Interact with scripts using a realistic terminal environment for authentic experience.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-surface rounded-xl border border-outline-variant p-1 shadow-xl">
+<img class="rounded-lg object-cover w-full h-[400px]" data-alt="A clean, dark-mode code editor interface showing a python script with syntax highlighting on the left, and a dark terminal window outputting test results on the right. The design is minimalist, professional, and uses subtle electric blue accents to indicate active state." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-jSAmqZ1mrjaat-FBtUgfaF5leRcVSzAkydas4RSihbybmtzFowoG7g96B-y7vN9H9N3Rlpo6ktp657vs58fn2I9Bd1rIB6k8DAwQTsr-nC6YBPZ8bvfx1ZAIqDgCdlv77HFwE0c6NWH7f7MxThISQyjvV-DU6MZpZgspZE5jkmX5XdSvk8EBLJ_UxhNiK0qptgPmURvCadNMjYDsz_U9NGBDCZJvDA4Y_OSVpCEa4d985hoSVMVJKA"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container-low py-20 px-margin-mobile md:px-margin-desktop border-t border-outline-variant" id="testimonials">
+<div class="max-w-max-width mx-auto">
+<h2 class="font-headline-md text-headline-md text-center text-on-background mb-12">Student Perspectives</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-6 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-outline/30 text-4xl">format_quote</span>
+<p class="text-on-surface-variant mb-6 relative z-10 font-body-sm text-body-sm">"The structural approach to algorithms finally made Big-O notation click for me. The environment is distraction-free, which really helped me focus."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Headshot of a high school student with a confident smile, illuminated by cool, low-key lighting indicative of a professional dark-mode tech environment. Minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCicB3m7cEIJSmU3xctbC3RaDkxhHokuqukRYVUleJ3TJPddQFqk-lG9nQh97wwiUCsB3N9zHjYUuJ4jdPd0ngbiHs0M9O-s2oEyB3iRJOGSF4evru0KNX9h9MlozFXnxRfqF0VR40vVMyLH3NF2lSdrwYlp6ZK7kdLmFPSTtxVxwbU7lVHh1bXLShvVOSvspeWYf8zAr8fLuPO0UoL5h-dGfalo-J9yqbmh4lZQ9vb0sQ7OylJU4CFuA"/>
+</div>
+<div>
+<div class="font-bold text-on-surface font-body-sm text-body-sm">Sarah Jenkins</div>
+<div class="text-outline font-label-caps text-label-caps uppercase">Grade 11</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-6 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-outline/30 text-4xl">format_quote</span>
+<p class="text-on-surface-variant mb-6 relative z-10 font-body-sm text-body-sm">"I appreciate that CodeMaster Pro treats us like actual developers. The projects are challenging but the progression is logical."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Headshot of a male high school student looking thoughtfully off-camera, lit by a soft rim light in a dark, minimalist setting consistent with a technical brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEbruUK_Y8Wm6ihcv2witljcbJB5yWGWwC1eYP45QbbrdnL2yMqUo0zRWm2hh3-KZvMvrqXnbag1sximZxuHrG2WevCXrzTky4Pjxp0Mb7FVXhsN9WFUBjue704OBtkESzKCj0hHmoxlDyILW38xfFhhEBHQ8phJIp1568Q935QcsKQJpO4FaFdod1wk7WxhGa64_gnPrAJ5NLw0rdMnWT8IM7SAjDeOSbjthErY_rJQZ-tsp60-uOgw"/>
+</div>
+<div>
+<div class="font-bold text-on-surface font-body-sm text-body-sm">Marcus Chen</div>
+<div class="text-outline font-label-caps text-label-caps uppercase">Grade 11</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-6 relative">
+<span class="material-symbols-outlined absolute top-6 right-6 text-outline/30 text-4xl">format_quote</span>
+<p class="text-on-surface-variant mb-6 relative z-10 font-body-sm text-body-sm">"The integrated terminal is a game changer. Not having to manage local environments allowed me to jump straight into learning Python."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Headshot of a young female student wearing glasses, smiling gently towards the camera in a modern, dark-themed studio setting with subtle blue accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR0ftU0xuyla-ebHsCDNRZkDX21Cpwo13gq1qVF3BAzVJgAVjGA6jxylMG6-Qt8vlKKTHLWCFuj0a0huhDdaClJz0A7sSNlvnafcW8TTX8cou-nklDn6ZPMA7XLtPCct6hVWD3t3K6dvLUP5C4-FR6azctYkfRAzPhgZVlfYVAoh-84o7ikMLtha3lLnWTmXXV8Wf-a58O9_u5Q7_Fc7irLJv2Y2IatK77LGdy1CIOBakfnnxTTOdxng"/>
+</div>
+<div>
+<div class="font-bold text-on-surface font-body-sm text-body-sm">Elena Rodriguez</div>
+<div class="text-outline font-label-caps text-label-caps uppercase">Grade 11</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop text-center border-t border-outline-variant">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Ready to Write Better Code?</h2>
+<p class="text-on-surface-variant mb-8">Join the platform designed specifically for high school computer science excellence.</p>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-body-lg text-body-lg font-bold px-8 py-4 rounded transition-colors inline-flex items-center gap-2">
+                    Create Student Account
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-8 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">CodeMaster Pro</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">© 2024 CodeMaster Educational Systems. All rights reserved.</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>صفحة الأسئلة - Quantro AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Cairo:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#3525cd",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-tertiary-container": "#ffd4a4",
+                      "background": "#f8f9ff",
+                      "surface-container": "#e5eeff",
+                      "on-secondary-fixed": "#002113",
+                      "surface-tint": "#4d44e3",
+                      "on-secondary-fixed-variant": "#005236",
+                      "tertiary": "#684000",
+                      "on-secondary-container": "#00714d",
+                      "on-primary-fixed": "#0f0069",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "secondary-fixed-dim": "#4edea3",
+                      "surface-container-low": "#eff4ff",
+                      "surface-container-highest": "#d3e4fe",
+                      "inverse-primary": "#c3c0ff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#213145",
+                      "secondary-container": "#6cf8bb",
+                      "on-tertiary-fixed": "#2a1700",
+                      "surface-variant": "#d3e4fe",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#c7c4d8",
+                      "on-background": "#0b1c30",
+                      "error": "#ba1a1a",
+                      "outline": "#777587",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#dad7ff",
+                      "primary-fixed": "#e2dfff",
+                      "surface": "#f8f9ff",
+                      "surface-dim": "#cbdbf5",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "tertiary-fixed": "#ffddb8",
+                      "secondary": "#006c49",
+                      "secondary-fixed": "#6ffbbe",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "primary-container": "#4f46e5",
+                      "surface-container-high": "#dce9ff",
+                      "on-surface-variant": "#464555",
+                      "tertiary-container": "#885500",
+                      "surface-bright": "#f8f9ff",
+                      "on-surface": "#0b1c30"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "20px",
+                      "container-max": "1440px",
+                      "sidebar-width": "260px",
+                      "margin-mobile": "16px",
+                      "stack-gap": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "label-caps": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "headline-sm": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "body-sm": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "label-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "display-lg-mobile": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "body-lg": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "body-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"],
+                      "headline-md": ["Cairo", "Plus Jakarta Sans", "sans-serif"]
+              },
+              "fontSize": {
+                      "display-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                      "label-md": ["13px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Cairo', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto md:hidden">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">menu</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary">Quantro AI</h1>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">account_circle</span>
+</div>
+</header>
+<div class="flex h-screen pt-16 md:pt-0 max-w-container-max mx-auto">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col bg-surface-container-low h-full w-sidebar-width py-6 border-l border-outline-variant fixed right-0 top-0 z-40">
+<div class="px-6 mb-8 flex flex-col gap-2">
+<h1 class="font-display-lg text-display-lg text-primary">Quantro AI</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AI-Driven Learning</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Lessons</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">article</span>
+<span class="font-label-md text-label-md">Summary</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-surface-container text-primary font-bold border-r-4 border-primary" href="#">
+<span class="material-symbols-outlined filled-icon">edit_note</span>
+<span class="font-label-md text-label-md">Practice</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-label-md text-label-md">Quizzes</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary-container text-on-primary-container rounded-lg py-2 font-label-md text-label-md hover:opacity-90 transition-opacity mb-4">
+                    Go Premium
+                </button>
+<div class="flex justify-around text-on-surface-variant border-t border-outline-variant pt-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">help_outline</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 md:mr-sidebar-width p-4 md:p-gutter pb-24 md:pb-gutter overflow-y-auto w-full">
+<div class="max-w-4xl mx-auto space-y-6">
+<!-- Header -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">تدريب: أساسيات البرمجة (الصف الحادي عشر)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">أجب عن الأسئلة التالية لاختبار فهمك للمفاهيم الأساسية.</p>
+<!-- Progress -->
+<div class="flex items-center gap-4">
+<div class="flex-1 bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/3 rounded-full"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">السؤال 1 من 3</span>
+</div>
+</div>
+<!-- Multiple Choice Question -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding shadow-sm border border-outline-variant/30">
+<div class="flex gap-4 items-start mb-6">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md text-label-md shrink-0">1</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">ما هو الغرض الرئيسي من استخدام حلقة التكرار (Loop) في البرمجة؟</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">اختر الإجابة الصحيحة من الخيارات التالية.</p>
+</div>
+</div>
+<div class="space-y-3 pl-12">
+<label class="flex items-center gap-3 p-4 rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="form-radio text-primary focus:ring-primary w-5 h-5 border-outline" name="q1" type="radio"/>
+<span class="font-body-md text-body-md">تخزين البيانات في الذاكرة لفترة طويلة.</span>
+</label>
+<label class="flex items-center gap-3 p-4 rounded-lg border border-primary bg-primary-container/10 cursor-pointer relative overflow-hidden">
+<input checked="" class="form-radio text-primary focus:ring-primary w-5 h-5 border-outline" name="q1" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface">تنفيذ كتلة من التعليمات البرمجية عدة مرات.</span>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 text-secondary">
+<span class="font-label-md text-label-md">إجابة صحيحة</span>
+<span class="material-symbols-outlined filled-icon">check_circle</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-4 rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="form-radio text-primary focus:ring-primary w-5 h-5 border-outline" name="q1" type="radio"/>
+<span class="font-body-md text-body-md">تحويل الكود إلى لغة الآلة.</span>
+</label>
+</div>
+<!-- Feedback Box -->
+<div class="mt-6 pl-12">
+<div class="bg-secondary-container/20 border border-secondary/30 rounded-lg p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary shrink-0">lightbulb</span>
+<div>
+<h4 class="font-label-md text-label-md text-secondary mb-1">توضيح:</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">حلقات التكرار (مثل for و while) تُستخدم لتقليل تكرار كتابة الكود من خلال السماح بتنفيذ نفس التعليمات البرمجية طالما أن شرطاً معيناً يتحقق.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Code Ordering Exercise -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding shadow-sm border border-outline-variant/30">
+<div class="flex gap-4 items-start mb-6">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md shrink-0">2</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">رتب الأسطر التالية لإنشاء دالة تطبع "Hello World" في بايثون:</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">اسحب وأفلت الأسطر بالترتيب الصحيح.</p>
+</div>
+</div>
+<div class="pl-12 space-y-2" id="sortable-list">
+<div class="bg-surface border border-outline-variant rounded-lg p-3 flex items-center gap-3 cursor-move hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-outline">drag_indicator</span>
+<code class="font-mono text-body-md text-primary-fixed-variant dir-ltr">print("Hello World")</code>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg p-3 flex items-center gap-3 cursor-move hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-outline">drag_indicator</span>
+<code class="font-mono text-body-md text-primary-fixed-variant dir-ltr">def say_hello():</code>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg p-3 flex items-center gap-3 cursor-move hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-outline">drag_indicator</span>
+<code class="font-mono text-body-md text-primary-fixed-variant dir-ltr">say_hello()</code>
+</div>
+</div>
+<div class="mt-6 pl-12 flex justify-end">
+<button class="bg-surface-container text-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-surface-container-high transition-colors">
+                            تحقق من الإجابة
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-margin-mobile pb-safe bg-surface shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-xl z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-caps text-label-caps mt-1">Lessons</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="#">
+<span class="material-symbols-outlined filled-icon">exercise</span>
+<span class="font-label-caps text-label-caps mt-1">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

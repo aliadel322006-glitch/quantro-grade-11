@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CodeMaster Pro - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#adc6ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary-container": "#461f00",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#003824",
+                        "outline-variant": "#424754",
+                        "tertiary-container": "#df7412",
+                        "tertiary": "#ffb786",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed": "#311400",
+                        "on-tertiary": "#502400",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#adc6ff",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d8e2ff",
+                        "primary": "#adc6ff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "surface-bright": "#393939",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#00311f",
+                        "surface": "#131313",
+                        "primary-container": "#4d8eff",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "surface-container": "#202020",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-surface-variant": "#c2c6d6",
+                        "secondary": "#4edea3",
+                        "secondary-container": "#00a572",
+                        "outline": "#8c909f",
+                        "on-primary-container": "#00285d",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#002e6a",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#005ac2",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#002113",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-low": "#1b1b1c"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "code-block": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "code-inline": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+                        "code-block": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "code-inline": ["13px", { lineHeight: "18px", fontWeight: "500" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        body { background-color: #121212; color: #e5e2e1; }
+        .card-surface { background-color: #1E1E1E; border: 1px solid #334155; }
+        .progress-bar-bg { background-color: #334155; }
+        .progress-bar-fill { background-color: #adc6ff; }
+        .streak-active { color: #4edea3; }
+        .border-primary-active { border: 1px solid #adc6ff; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg text-body-lg overflow-x-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-surface-container-low font-label-caps text-label-caps h-screen w-64 fixed left-0 top-0 border-r border-outline-variant dark:border-outline-variant hidden md:flex flex-col h-full py-6 z-20">
+<div class="px-4 mb-8">
+<h1 class="font-headline-md text-headline-md text-primary">Grade 11 CS</h1>
+<p class="text-on-surface-variant mt-1">Python Fundamentals</p>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="text-primary border-l-4 border-primary bg-primary/10 px-4 py-3 flex items-center gap-3 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:text-primary hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                    Curriculum
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:text-primary hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">code</span>
+                    Practice
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:text-primary hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                    Projects
+                </a>
+</li>
+</ul>
+<div class="mt-auto px-4 space-y-2">
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:text-primary hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:text-primary hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+                Support
+            </a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface font-body-lg text-body-lg w-full top-0 sticky border-b border-outline-variant dark:border-outline-variant z-10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-max-width mx-auto h-16">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary md:hidden">CodeMaster Pro</h2>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-primary">
+<button class="hover:bg-surface-variant/50 transition-colors p-2 rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-surface-variant/50 transition-colors p-2 rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">help</span>
+</button>
+<img alt="Student Profile" class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="A small, stylized digital avatar portrait of a student, minimalist and professional, suitable for a technical dashboard profile picture. Clean background, sharp lines, dark mode aesthetic with slight blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBthhkdiDmp807Q9LKXnqQXzYuBz7TsU4TnjZxNRBKSDbmZPCF3MJewgog1DnNJ8N8SnPEHnARYPy2ccOdyXk4ZycBzIXOQ4VmpkQsYT7gMXvjo473GI_SLKC8rgPGGvoN5xoj8nHKyLJWNxE8adVJrncC6F4BCLHXBZWAIUAnqGedd71qjS33TWC4-iHpQvoXsvtb7URVhIbO1dTHEH5qORqV57QGjhOz9xioiMYqSgQy1giAcVq2hLg"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop max-w-max-width mx-auto w-full">
+<div class="mb-8">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2 text-on-surface">Welcome back, Alex.</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">You're making solid progress. Keep up the momentum.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Progress Overview (Spans 8 cols on desktop) -->
+<div class="col-span-1 md:col-span-8 card-surface rounded-xl p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Course Progress</h3>
+<span class="font-code-block text-code-block text-primary">68%</span>
+</div>
+<div class="w-full h-2 progress-bar-bg rounded-full overflow-hidden mb-8">
+<div class="h-full progress-bar-fill rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-auto">
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-2 block">task_alt</span>
+<span class="block font-headline-md text-headline-md mb-1">12</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Modules</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2 block">code</span>
+<span class="block font-headline-md text-headline-md mb-1">45</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Exercises</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-tertiary-container mb-2 block">school</span>
+<span class="block font-headline-md text-headline-md mb-1">3</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Projects</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant border-primary-active">
+<span class="material-symbols-outlined streak-active mb-2 block">local_fire_department</span>
+<span class="block font-headline-md text-headline-md mb-1 streak-active">7 Days</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Streak</span>
+</div>
+</div>
+</div>
+<!-- Up Next / Assignments (Spans 4 cols on desktop) -->
+<div class="col-span-1 md:col-span-4 card-surface rounded-xl p-6 flex flex-col">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-6">Up Next</h3>
+<div class="space-y-4 flex-1">
+<div class="bg-surface-container-low p-4 rounded-lg border-l-4 border-primary">
+<h4 class="font-body-lg text-body-lg font-semibold mb-1">Data Structures Quiz</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-3">Due Today, 11:59 PM</p>
+<button class="bg-primary text-on-primary font-body-sm text-body-sm px-4 py-2 rounded font-semibold hover:bg-primary-fixed-dim transition-colors w-full">Start Quiz</button>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg border-l-4 border-outline-variant opacity-80 hover:opacity-100 transition-opacity">
+<h4 class="font-body-lg text-body-lg font-semibold mb-1">File I/O Assignment</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Due in 3 days</p>
+</div>
+</div>
+</div>
+<!-- Recently Viewed Lessons -->
+<div class="col-span-1 md:col-span-12 card-surface rounded-xl p-6">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-6">Recent Lessons</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="group block" href="#">
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-5 h-full group-hover:border-primary transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-surface-variant rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">integration_instructions</span>
+</div>
+<span class="font-code-inline text-code-inline text-primary">Python List Comprehensions</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Mastering one-liners for efficient data transformation.</p>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-5 h-full group-hover:border-primary transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-surface-variant rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">functions</span>
+</div>
+<span class="font-code-inline text-code-inline text-primary">Lambda Functions</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Anonymous functions and when to use them in functional programming.</p>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-5 h-full group-hover:border-primary transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-surface-variant rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">error</span>
+</div>
+<span class="font-code-inline text-code-inline text-primary">Exception Handling</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Try, except, finally blocks to write robust, error-resistant code.</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

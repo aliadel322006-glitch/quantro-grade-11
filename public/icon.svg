@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Quantro AI logo">
+  <rect width="512" height="512" rx="118" fill="#163c63"/>
+  <path d="M126 162c0-30 24-54 54-54h152c30 0 54 24 54 54v145c0 30-24 54-54 54h-35l-41 45-41-45h-35c-30 0-54-24-54-54V162Z" fill="#fff"/>
+  <path d="M184 210h144M184 260h103M184 310h70" stroke="#ff6b57" stroke-width="28" stroke-linecap="round"/>
+</svg>

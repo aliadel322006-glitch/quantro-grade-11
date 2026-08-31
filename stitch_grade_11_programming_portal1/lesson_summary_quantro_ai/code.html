@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quantro AI - Lesson Summary</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#3525cd",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-tertiary-container": "#ffd4a4",
+                        "background": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed": "#002113",
+                        "surface-tint": "#4d44e3",
+                        "on-secondary-fixed-variant": "#005236",
+                        "tertiary": "#684000",
+                        "on-secondary-container": "#00714d",
+                        "on-primary-fixed": "#0f0069",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-primary": "#c3c0ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "secondary-container": "#6cf8bb",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "on-background": "#0b1c30",
+                        "error": "#ba1a1a",
+                        "outline": "#777587",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#dad7ff",
+                        "primary-fixed": "#e2dfff",
+                        "surface": "#f8f9ff",
+                        "surface-dim": "#cbdbf5",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-fixed": "#ffddb8",
+                        "secondary": "#006c49",
+                        "secondary-fixed": "#6ffbbe",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary-container": "#4f46e5",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#464555",
+                        "tertiary-container": "#885500",
+                        "surface-bright": "#f8f9ff",
+                        "on-surface": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "20px",
+                        "container-max": "1440px",
+                        "sidebar-width": "260px",
+                        "margin-mobile": "16px",
+                        "stack-gap": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-caps": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "display-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Ambient shadows and utilities */
+        .ambient-shadow-sm { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); }
+        .ambient-shadow-md { box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08); }
+        /* RTL utility overrides for the shell strictly positioned left */
+        .shell-left-override { left: 0; right: auto; }
+        .main-content-offset { margin-right: 0; }
+        @media (min-width: 1024px) {
+            .main-content-offset { margin-left: var(--spacing-sidebar-width); margin-right: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background shadow-sm flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto" dir="ltr">
+<div class="font-display-lg text-display-lg text-primary dark:text-inverse-primary hidden md:block">
+            Quantro AI
+        </div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary md:hidden">
+            Quantro AI
+        </div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors active:opacity-80 p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors active:opacity-80 p-2 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-full py-6 border-r border-outline-variant dark:border-outline bg-surface-container-low dark:bg-on-background fixed left-0 top-0 w-sidebar-width shell-left-override" dir="ltr">
+<div class="px-6 mb-8 mt-16">
+<h1 class="font-display-lg text-display-lg text-primary dark:text-inverse-primary">Quantro AI</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">AI-Driven Learning</p>
+</div>
+<div class="flex-1 flex flex-col gap-2 px-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                Lessons
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-surface-container dark:bg-surface-container-highest text-primary font-bold border-l-4 border-primary transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">article</span>
+                Summary
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+                Practice
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">quiz</span>
+                Quizzes
+            </a>
+</div>
+<div class="mt-auto px-4 flex flex-col gap-2">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg font-label-md text-label-md flex justify-center items-center gap-2 hover:opacity-90 transition-opacity">
+                Go Premium
+            </button>
+<div class="h-px bg-outline-variant my-2"></div>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all active:scale-95 duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                Help
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="main-content-offset pt-24 pb-24 lg:pb-12 px-margin-mobile md:px-gutter max-w-container-max mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="mb-8">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md mb-2">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span>الصف الحادي عشر - البرمجة</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                ملخص الدرس: البرمجة كائنية التوجه (OOP)
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">
+                مراجعة شاملة للمفاهيم الأساسية، الفئات، والكائنات لبناء تطبيقات هيكلية وقابلة لإعادة الاستخدام.
+            </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-gap">
+<!-- In a Nutshell -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-card-padding ambient-shadow-sm border border-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-background">باختصار</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        البرمجة كائنية التوجه (OOP) هي نمط برمجي يعتمد على مفهوم "الكائنات"، والتي يمكن أن تحتوي على بيانات (سمات) وشيفرات برمجية (طرق). تهدف إلى تبسيط تصميم البرمجيات المعقدة بجعلها أكثر تنظيمًا، وقابلية للصيانة، وإعادة الاستخدام من خلال محاكاة كيانات العالم الحقيقي.
+                    </p>
+</div>
+</div>
+<!-- Key Stats / Mini Takeaway -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-xl p-card-padding ambient-shadow-md flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">account_tree</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2 relative z-10">الركائز الأربع الأساسية</h3>
+<ul class="font-body-md text-body-md space-y-2 relative z-10 opacity-90">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> التغليف (Encapsulation)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> التجريد (Abstraction)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> الوراثة (Inheritance)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> تعدد الأشكال (Polymorphism)</li>
+</ul>
+</div>
+<!-- Visual Cheat Sheet -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-xl p-card-padding ambient-shadow-sm border border-surface-container-low">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">schema</span>
+<h2 class="font-headline-md text-headline-md text-on-background">مخطط توضيحي للدرس</h2>
+</div>
+<div class="w-full h-64 md:h-96 rounded-lg bg-surface-container overflow-hidden relative" data-alt="A clean, modern educational diagram illustrating Object-Oriented Programming concepts in a light-mode UI style. It shows a central 'Class' node branching out to 'Objects' with glowing blue connection lines on a pristine white background. The aesthetic is corporate edtech, using a palette of soft whites, light blues, and deep indigo accents. Precise, high-quality vector graphics style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnvQ1ohIheTIP_st_KSp3UnQrvvSbwriHA19yB5Z49gqtEXbeL6uw1DZfeIz7yTS97cL6HrMfdw25seFm7Kq_LuSsZiOGKai9BzMg4_6btPnYP35n2cYsu9jpvgyEF5p_FR_7tNYMDxiAI-6wslRkGv9TrMPstaPsMh61SdEkIk0lQ5CzPb-jFmjCWakUL6WMfuSGdjeUAm3RQGwOC_8WQp0WYZ3YDXWSiSs1zVN71IR_WzLgjqSSrjg'); background-size: cover; background-position: center;">
+<!-- Image placeholder container -->
+</div>
+</div>
+<!-- Important Terms -->
+<div class="md:col-span-12">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4 mt-4">مصطلحات هامة</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-gap">
+<!-- Term 1 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-lg ambient-shadow-sm border-l-4 border-l-primary">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">الفئة (Class)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">مخطط أو قالب يحدد الخصائص والسلوكيات التي ستشترك فيها الكائنات التي يتم إنشاؤها منه.</p>
+</div>
+<!-- Term 2 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-lg ambient-shadow-sm border-l-4 border-l-secondary">
+<h4 class="font-headline-sm text-headline-sm text-secondary mb-2">الكائن (Object)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">نسخة محددة من الفئة تحتوي على قيم فعلية لخصائصها وتستطيع تنفيذ سلوكياتها.</p>
+</div>
+<!-- Term 3 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-lg ambient-shadow-sm border-l-4 border-l-tertiary">
+<h4 class="font-headline-sm text-headline-sm text-tertiary mb-2">السمات (Attributes)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">المتغيرات التي تخزن حالة الكائن وبياناته الخاصة داخل الفئة.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-margin-mobile pb-safe bg-surface dark:bg-on-background shadow-lg rounded-t-xl z-50" dir="ltr">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-label-caps text-label-caps">Lessons</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">exercise</span>
+<span class="font-label-caps text-label-caps">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</a>
+</nav>
+</body></html>
